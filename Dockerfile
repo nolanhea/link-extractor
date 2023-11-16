@@ -1,11 +1,11 @@
 FROM python:3
 
-RUN pip install beautifulsoup4
-RUN pip install requests
-
-
 WORKDIR /app
+COPY requirements.txt /app/
+RUN pip install -r requirements.txt
+
+
 COPY linkextractor.py /app/
 RUN chmod a+x linkextractor.py
 
-ENTRYPOINT ["./linkextractor.py"]
+ENTRYPOINT ["./main.py"]
