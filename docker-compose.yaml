@@ -4,11 +4,14 @@ services:
     build: ./api
     ports:
       - "5000:5000"
+    environment:
+      - REDIS_URL=redis://redis:6379
   web:
-    image: php:7-apache
+    image: linkextractor-web
+    build: ./www
     ports:
       - "80:80"
     environment:
       - API_ENDPOINT=http://api:5000/api/
-    volumes:
-      - ./www:/var/www/html
+  redis:
+    image: redis
