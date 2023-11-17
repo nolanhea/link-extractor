@@ -1,4 +1,4 @@
-beautifulsoup4
-flask
-requests
-redis
+beautifulsoup4==4.12.2
+flask==2.3.3
+requests==2.30.0
+redis==5.0.0
