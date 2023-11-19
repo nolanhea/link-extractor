@@ -2,4 +2,3 @@
 Извлекает все ссылки по указанному адреcy.
 Использует redis для кэширования запросов.
 - docker-compose up -d --build
-##### Туториал отсюда - https://training.play-with-docker.com/
